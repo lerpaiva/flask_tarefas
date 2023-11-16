@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
 import pandas as pd
+from flask_cors import CORS
+
 
 app = Flask(__name__)
-
+CORS(app)
 try:
     open('Text.csv', 'x')
     with open("Text.csv", "w") as arquivo:
