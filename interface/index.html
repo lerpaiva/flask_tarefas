@@ -29,25 +29,26 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Nova Tarefa</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                      <label for="exampleInputName1" class="form-label">Tarefa</label>
-                      <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
-                    </div>
+                <div class="modal-header">
+                    <h5 class="modal-title">Nova Tarefa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="add-js" id="formTarefa">
+                        <div class="mb-3">
+                            <label for="exampleInputName1" class="form-label">Tarefa</label>
+                            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" name="tarefa">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary aa">Confirmar</button>
+                </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Confirmar</button>
-            </div>
             </div>
         </div>
     </div>
+    
 
     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog">
@@ -66,7 +67,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Confirmar</button>
+                <button type="button" class="btn btn-primary aa">Confirmar</button>
             </div>
             </div>
         </div>
@@ -88,7 +89,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Confirmar</button>
+                <button type="button" class="btn btn-primary aa">Confirmar</button>
             </div>
             </div>
         </div>
