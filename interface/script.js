@@ -68,26 +68,26 @@ function excluir(itemid){
 } 
 
 /* ALTERAR*/
-function alterar(itemTAREF){
-        const alterarr = document.getElementById('alterarTarefa')
-        alterarr.addEventListener('submit', function(event) {
-            event.preventDefault();
-        
-            const tarefa = document.getElementById('exampleInputName2').value;
-        
-            const Tarefa = {
-                Tarefa: tarefa
-            };
-        
-            enviarDadosAPIATT(itemTAREF,Tarefa);
-        });
 
-function enviarDadosAPIATT(itemTAREF,Tarefa) {
-            axios.put(`http://127.0.0.1:5000/alterar/'${itemTAREF}/${Tarefa}`)
-                .then(response => {
-                    console.log(response.data.Tarefa);
-                })
-                .catch(error => {
-                    console.error('Erro na requisição POST', error);
-                });
-        }}
+function alterar(tarefa_antiga) {
+            const btn = document.getElementById('alterarTarefa');
+        
+            btn.addEventListener("click", () =>{
+                const tarefa_nova = document.getElementById("tarefaUP").value;
+    
+                if (tarefa_nova.trim() !== "") {
+        
+                    axios.put(`http://127.0.0.1:5000/update/${tarefa_antiga}/${tarefa_nova}`)
+                        .then(response => {
+                            console.log('Resposta do servidor:', response.data.Tarefa);
+                        })
+                        .catch(error => {
+                            console.error('Erro na requisição:', error);
+                            alert("Erro ao editar")
+                        });
+                }
+                else{
+                    alert("Insira uma tarefa valida")
+                }
+            });
+        }
